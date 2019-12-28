@@ -1,8 +1,22 @@
+import os
 import sys
 import time
+from pathlib import Path
 from blessed import Terminal
 import pubtweet
 from logger import Logger
+
+
+ROOT_PATH = os.path.dirname(os.path.realpath(__file__)) + '/'
+
+
+def initialize():
+    data_dir = Path(ROOT_PATH + 'data')
+    if not data_dir.is_dir():
+        os.mkdir(ROOT_PATH + 'data')
+    log_dir = Path(ROOT_PATH + 'log')
+    if not log_dir.is_dir():
+        os.mkdir(ROOT_PATH + 'log')
 
 
 def wscr(text):
@@ -36,6 +50,7 @@ def prompt_quit(term):
 
 def main(argv, argc):
     """Program entry point."""
+    initialize()
     term = Terminal()
     logger = Logger()
 

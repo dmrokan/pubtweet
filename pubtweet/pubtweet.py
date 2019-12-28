@@ -1,3 +1,4 @@
+import os
 import sys
 from threading import Thread
 import time
@@ -9,7 +10,7 @@ import datetime
 from logger import Logger
 
 
-ROOT_PATH = './'
+ROOT_PATH = os.path.dirname(os.path.realpath(__file__)) + '/'
 CONFIG_FILE_NAME = 'config.json'
 CONFIG_FILE_PATH = ROOT_PATH + CONFIG_FILE_NAME
 DATA_DIR_NAME = 'data/'
