@@ -4,3 +4,8 @@
 
 ## Installation
 
+- Pip packages
+  - blessed
+  - requests_html
+  - bs4
+  
