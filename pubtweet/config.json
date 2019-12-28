@@ -1,0 +1,15 @@
+{
+    "feeds": {
+        "ThePSF": {
+            "last_id": 1210697125014769664
+        },
+        "debian": {
+            "last_id": 1162509506510819328
+        }
+    },
+    "profile_names_file": "profile_names.txt",
+    "settings": {
+        "new_req_sleep_time": 600,
+        "update_period": 600
+    }
+}
